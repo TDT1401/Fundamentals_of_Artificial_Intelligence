@@ -13,11 +13,12 @@ from student_sorting import (
     sort_by_gpa_descending,
     sort_by_name_a_to_z
 )
+from student_storage import load_students_from_file
 from ui import show_menu
 
 
 def main():
-    students = []
+    students = load_students_from_file()  # Load dữ liệu khi khởi động
 
     while True:
         show_menu()

@@ -1,4 +1,5 @@
 from input_validators import input_non_empty, input_positive_int, input_gpa
+from student_storage import save_students_to_file
 
 
 def find_student_by_id(students, student_id):
@@ -36,6 +37,7 @@ def add_student(students):
     }
 
     students.append(student)
+    save_students_to_file(students)
     print("Them sinh vien thanh cong.")
 
 
@@ -161,6 +163,7 @@ def update_student(students):
         else:
             print("Nam hoc khong hop le. Giu nguyen gia tri cu.")
 
+    save_students_to_file(students)
     print("Cap nhat sinh vien thanh cong.")
 
 
@@ -178,4 +181,5 @@ def delete_student(students):
         return
 
     students.remove(student)
+    save_students_to_file(students)
     print("Xoa sinh vien thanh cong.")

@@ -4,3 +4,8 @@ models
 mini_project_student/__pycache__/
 exports
 employee_management/__pycache__/
+build/
+dist/
+*.egg-info/
+gui.spec
+__pycache__/

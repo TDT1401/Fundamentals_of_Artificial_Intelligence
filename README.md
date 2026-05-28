@@ -1,268 +1,113 @@
-# 🤖 Intro to AI - PyTorch Learning Project
+# Intro to AI
 
-> Dự án học tập về **Deep Learning** và **Neural Networks** sử dụng **PyTorch**
+> Dự án học tập về các khái niệm cơ bản của AI, Machine Learning và Deep Learning.
 
-## 📋 Mục đích dự án
+## Mục tiêu
 
-Dự án này được tạo ra để **học tập** các khái niệm cơ bản của AI:
+Repository này được dùng để học theo từng chủ đề nền tảng của AI:
 
-- ✅ Tensors và PyTorch basics
-- ✅ Xây dựng Neural Networks
-- ✅ Training loops và optimization
-- ✅ Image Classification với FashionMNIST
-- ✅ GPU/CUDA acceleration
+- Python và xử lý dữ liệu cơ bản
+- Đại số tuyến tính, giải tích và xác suất thống kê
+- Machine Learning với các mô hình kinh điển
+- PyTorch, tensor, neural network và training loop
+- Thực hành qua notebook và các mini project Python
 
----
-
-## 📂 Cấu trúc dự án
+## Cấu trúc chính
 
 ```
 intro_to_AI/
-├── check.py                          # Script kiểm tra PyTorch & CUDA
-├── listpy.ipynb                      # Notebook về Python basics
-├── tensors.ipynb                     # Notebook về Tensors
-├── data/
-│   └── FashionMNIST/                 # Dataset FashionMNIST
-│       └── raw/                      # Raw training & test data
+├── check.py
 ├── docs/
-│   └── pytorch.md                    # Hướng dẫn PyTorch tiếng Việt
+│   └── pytorch.md
+├── data/
 ├── models/
-│   └── model.pth                     # Pre-trained model
-└── pytorch/
-    └── fashionMNISTImageClassifier.ipynb  # Main project notebook
+├── calculus_for_ai/
+├── linear_algebra/
+├── probability_and_statistics/
+├── dataset_analysis/
+├── machine_learning/
+├── pytorch/
+├── employee_management/
+└── mini_project_student/
 ```
 
----
+### Các phần nổi bật
 
-## 🎯 Các Notebook chính
+- `calculus_for_ai/`: đạo hàm, gradient, partial derivative
+- `linear_algebra/`: vector, matrix, norm, rank, eigenvalues/eigenvectors
+- `probability_and_statistics/`: phân phối, xác suất, thống kê cơ bản
+- `dataset_analysis/`: phân tích dữ liệu bằng notebook
+- `machine_learning/`: logistic regression, decision tree, KNN, naive bayes, random forest
+- `pytorch/`: tensor, training, FashionMNIST và các ví dụ PyTorch
+- `employee_management/`: mini app quản lý nhân viên chạy bằng console
+- `mini_project_student/`: mini app quản lý sinh viên chạy bằng console
 
-### 1. **listpy.ipynb**
+## Bắt đầu nhanh
 
-Giới thiệu **Python basics** cần thiết cho Machine Learning
-
-### 2. **tensors.ipynb**
-
-Tìm hiểu về **Tensors** - đơn vị dữ liệu cơ bản trong PyTorch
-
-### 3. **fashionMNISTImageClassifier.ipynb** ⭐ (Main)
-
-**Phân loại hình ảnh thời trang** từ dataset FashionMNIST
-
-#### Nội dung:
-
-- 📥 Load FashionMNIST dataset (60K training + 10K test images)
-- 🏗️ Xây dựng Neural Network (3 layers)
-- 🚀 Training loop với SGD optimizer
-- 📊 Testing & evaluation
-- 💾 Lưu/load pre-trained model
-
-#### Model Architecture:
-
-```
-Input (28x28)
-  ↓
-Flatten
-  ↓
-Linear (784 → 512) + ReLU
-  ↓
-Linear (512 → 512) + ReLU
-  ↓
-Linear (512 → 10)
-  ↓
-Output (10 classes)
-```
-
----
-
-## 🚀 Hướng dẫn sử dụng
-
-### 1. Cài đặt môi trường
+### 1. Tạo và kích hoạt môi trường ảo
 
 ```bash
-# Tạo virtual environment
 python -m venv .venv
-
-# Activate (Windows)
 .venv\Scripts\activate
-
-# Cài đặt dependencies
-pip install torch torchvision torchaudio
-pip install jupyter
 ```
 
-### 2. Kiểm tra PyTorch & CUDA
+### 2. Cài thư viện cần thiết
+
+```bash
+pip install torch torchvision torchaudio
+pip install jupyter numpy pandas matplotlib seaborn scikit-learn
+```
+
+Nếu bạn dùng GPU, hãy cài PyTorch đúng phiên bản CUDA theo hướng dẫn trên trang chủ PyTorch.
+
+### 3. Kiểm tra PyTorch và CUDA
 
 ```bash
 python check.py
 ```
 
-Output sẽ hiển thị:
+Script này sẽ in ra phiên bản PyTorch, trạng thái CUDA và thông tin GPU nếu máy có hỗ trợ.
 
-- ✅ PyTorch version
-- ✅ CUDA availability
-- ✅ GPU info (nếu có)
-
-### 3. Chạy Jupyter Notebook
+### 4. Mở notebook
 
 ```bash
 jupyter notebook
 ```
 
-Sau đó:
+Sau đó mở các notebook theo chủ đề bạn muốn học, ví dụ:
 
-1. Mở `pytorch/fashionMNISTImageClassifier.ipynb`
-2. Chạy từng cell theo thứ tự
+- `pytorch/fashionMNISTImageClassifier.ipynb`
+- `machine_learning/machine_learning_algorithms/logistic_regression.ipynb`
+- `linear_algebra/vector.ipynb`
+- `calculus_for_ai/derivative.ipynb`
 
----
+### 5. Chạy các mini project Python
 
-## 📚 Dataset: FashionMNIST
+Các app console trong repo dùng import nội bộ theo thư mục, vì vậy nên chạy ngay trong folder của từng project:
 
-**FashionMNIST** là dataset chứa hình ảnh các loại quần áo (28×28 pixels, grayscale)
-
-**10 classes:**
-
-- 0: T-shirt/top
-- 1: Trouser
-- 2: Pullover
-- 3: Dress
-- 4: Coat
-- 5: Sandal
-- 6: Shirt
-- 7: Sneaker
-- 8: Bag
-- 9: Ankle boot
-
-**Kích thước:**
-
-- Training: 60,000 images
-- Testing: 10,000 images
-
----
-
-## 🔧 Công cụ & Thư viện
-
-| Thư viện        | Mục đích                          |
-| --------------- | --------------------------------- |
-| **PyTorch**     | Framework chính cho deep learning |
-| **torchvision** | Datasets và image utilities       |
-| **Jupyter**     | Notebook interactivelearn         |
-| **CUDA**        | GPU acceleration (nếu có)         |
-
----
-
-## 💡 Các khái niệm chính được học
-
-### 1. **Tensors**
-
-- Cấu trúc dữ liệu nhiều chiều
-- So sánh: NumPy arrays vs PyTorch tensors
-
-### 2. **Neural Network**
-
-- Layers: Linear, ReLU, Flatten
-- Forward pass & backward pass
-
-### 3. **Training Loop**
-
-```
-Epoch:
-  ├─ Forward pass (input → model → output)
-  ├─ Compute loss
-  ├─ Backward pass (gradient calculation)
-  └─ Optimizer step (update weights)
+```bash
+cd employee_management
+python main.py
 ```
 
-### 4. **Optimization**
-
-- SGD (Stochastic Gradient Descent)
-- Loss functions: CrossEntropyLoss
-
-### 5. **Evaluation**
-
-- Accuracy
-- Loss metrics
-- Test set validation
-
----
-
-## ⚡ GPU/CUDA Support
-
-Dự án tự động detect device:
-
-```python
-if torch.cuda.is_available():
-    device = "cuda"      # GPU
-elif hasattr(torch.backends, "mps"):
-    device = "mps"       # Apple Silicon
-else:
-    device = "cpu"       # CPU
+```bash
+cd mini_project_student
+python main.py
 ```
 
-**Lợi ích GPU:**
+## Dữ liệu và model
 
-- 🚀 Training **10-100x nhanh hơn**
-- 💾 Xử lý dataset lớn hơn
-- ⚡ Parallel computation
+- `data/` chứa các bộ dữ liệu mẫu như Titanic, Diabetes, FashionMNIST, email spam, employees, students
+- `models/` chứa model đã train sẵn, hiện có `model.pth` và các file model khác tùy notebook
 
----
+## Tài liệu tham khảo
 
-## 📖 Tài liệu tham khảo
+- `docs/pytorch.md`: hướng dẫn PyTorch tiếng Việt
+- [PyTorch Docs](https://pytorch.org/docs/)
+- [PyTorch Tutorials](https://pytorch.org/tutorials/)
 
-- Xem file `docs/pytorch.md` để có **hướng dẫn chi tiết tiếng Việt**
-- [PyTorch Official Docs](https://pytorch.org/docs/)
-- [FashionMNIST Dataset](https://github.com/zalandoresearch/fashion-mnist)
+## Ghi chú
 
----
-
-## 🔍 Kiểm tra model
-
-Pre-trained model đã được lưu tại `models/model.pth`
-
-Để load và sử dụng:
-
-```python
-model = NeuralNetwork()
-model.load_state_dict(torch.load('models/model.pth'))
-model.eval()
-```
-
----
-
-## 📝 Ghi chú
-
-- 💻 Project này **để học tập**, không phải production
-- 🎓 Các comments và docstrings giúp hiểu code
-- 🔄 Tự do modify và experiment
-- 📊 Thử thay đổi hyperparameters: epochs, batch_size, learning rate
-
----
-
-## ❓ Câu hỏi thường gặp
-
-**Q: Model chạy chậm?**
-A: Kiểm tra `check.py` xem có GPU không. Nếu không có, model sẽ chạy trên CPU.
-
-**Q: Làm sao để cải thiện accuracy?**
-A: Thử tăng epochs, điều chỉnh learning rate, hoặc thay đổi network architecture
-
-**Q: Dataset đã download ở đâu?**
-A: Được lưu tự động ở folder `data/FashionMNIST/`
-
----
-
-## 📞 Liên hệ & Support
-
-Nếu có thắc mắc về **PyTorch** hoặc **Deep Learning**:
-
-- Đọc documentation trong `docs/pytorch.md`
-- Xem comments trong code
-- Tham khảo [PyTorch tutorials](https://pytorch.org/tutorials/)
-
----
-
-**Happy Learning! 🚀 AI**
-
----
-
-_Dự án tạo vào: April 2026_  
-_PyTorch Version: 2.x_
+- Đây là project học tập, ưu tiên rõ ràng và dễ thử nghiệm hơn là tối ưu production
+- Bạn có thể thay đổi epochs, learning rate, batch size và kiến trúc model để quan sát kết quả
+- Nên chọn đúng Python interpreter của `.venv` trong VS Code để notebook và script chạy nhất quán

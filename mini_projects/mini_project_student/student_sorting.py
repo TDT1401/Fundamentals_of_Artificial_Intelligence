@@ -1,4 +1,4 @@
-from student_operations import display_students
+from mini_projects.mini_project_student.student_operations import display_students
 
 
 def sort_by_gpa_ascending(students):

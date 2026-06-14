@@ -1,5 +1,5 @@
-from input_validators import input_non_empty, input_positive_int, input_gpa
-from student_storage import save_students_to_file
+from mini_projects.mini_project_student.input_validators import input_non_empty, input_positive_int, input_gpa
+from mini_projects.mini_project_student.student_storage import save_students_to_file
 
 
 def find_student_by_id(students, student_id):

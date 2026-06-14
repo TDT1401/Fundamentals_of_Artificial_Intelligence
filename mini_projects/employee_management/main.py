@@ -1,4 +1,4 @@
-from employee_manager import EmployeeManager
+from mini_projects.employee_management.employee_manager import EmployeeManager
 
 
 def show_menu():

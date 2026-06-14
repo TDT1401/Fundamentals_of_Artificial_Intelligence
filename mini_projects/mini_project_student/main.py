@@ -1,6 +1,6 @@
-from input_validators import input_non_empty
+from mini_projects.mini_project_student.input_validators import input_non_empty
 
-from student_operations import (
+from mini_projects.mini_project_student.student_operations import (
     add_student,
     display_students,
     search_student_by_id,
@@ -8,13 +8,13 @@ from student_operations import (
     update_student,
     delete_student
 )
-from student_sorting import (
+from mini_projects.mini_project_student.student_sorting import (
     sort_by_gpa_ascending,
     sort_by_gpa_descending,
     sort_by_name_a_to_z
 )
-from student_storage import load_students_from_file
-from ui import show_menu
+from mini_projects.mini_project_student.student_storage import load_students_from_file
+from mini_projects.mini_project_student.ui import show_menu
 
 
 def main():

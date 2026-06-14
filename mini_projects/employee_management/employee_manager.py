@@ -1,5 +1,5 @@
-from employee import Employee
-from validation import input_not_empty, input_birth_year, input_salary
+from mini_projects.employee_management.employee import Employee
+from mini_projects.employee_management.validation import input_not_empty, input_birth_year, input_salary
 import json
 import os
 import csv

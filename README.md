@@ -46,6 +46,8 @@ intro_to_AI/
 
 ### 1. Tạo và kích hoạt môi trường ảo
 
+- Recommend python 3.10.11
+
 ```bash
 python -m venv .venv
 .venv\Scripts\activate

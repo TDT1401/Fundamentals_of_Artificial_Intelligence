@@ -1,115 +1,123 @@
 # Intro to AI
 
-> Dự án học tập về các khái niệm cơ bản của AI, Machine Learning và Deep Learning.
+> A hands-on learning repository for core AI, machine learning, and deep learning concepts.
 
-## Mục tiêu
+## Overview
 
-Repository này được dùng để học theo từng chủ đề nền tảng của AI:
+This repository is organized as a study path across the main foundations of AI:
 
-- Python và xử lý dữ liệu cơ bản
-- Đại số tuyến tính, giải tích và xác suất thống kê
-- Machine Learning với các mô hình kinh điển
-- PyTorch, tensor, neural network và training loop
-- Thực hành qua notebook và các mini project Python
+- Python basics and data handling
+- Linear algebra, calculus, and probability/statistics
+- Classical machine learning algorithms
+- PyTorch, tensors, neural networks, and training loops
+- Practice notebooks and small Python mini projects
 
-## Cấu trúc chính
+## Project Structure
 
 ```
 intro_to_AI/
-├── check.py
-├── docs/
-│   └── pytorch.md
-├── data/
-├── models/
-├── calculus_for_ai/
-├── linear_algebra/
-├── probability_and_statistics/
+├── Calculus_for_AI/
 ├── dataset_analysis/
+├── data/
+├── docs/
+├── linear_algebra/
 ├── machine_learning/
+├── mini_projects/
+├── models/
+├── optimization/
+├── probability_and_statistics/
 ├── pytorch/
-├── employee_management/
-└── mini_project_student/
+└── README.md
 ```
 
-### Các phần nổi bật
+## Highlights
 
-- `calculus_for_ai/`: đạo hàm, gradient, partial derivative
-- `linear_algebra/`: vector, matrix, norm, rank, eigenvalues/eigenvectors
-- `probability_and_statistics/`: phân phối, xác suất, thống kê cơ bản
-- `dataset_analysis/`: phân tích dữ liệu bằng notebook
-- `machine_learning/`: logistic regression, decision tree, KNN, naive bayes, random forest
-- `pytorch/`: tensor, training, FashionMNIST và các ví dụ PyTorch
-- `employee_management/`: mini app quản lý nhân viên chạy bằng console
-- `mini_project_student/`: mini app quản lý sinh viên chạy bằng console
+- `Calculus_for_AI/`: derivatives, gradients, multivariable functions, and partial derivatives
+- `linear_algebra/`: vectors, matrices, norms, rank, eigenvalues, and eigenvectors
+- `probability_and_statistics/`: probability, distributions, and basic statistics
+- `dataset_analysis/`: notebook-based data exploration and analysis
+- `machine_learning/`: regression, classification, clustering, feature engineering, and model evaluation
+- `optimization/`: loss functions, gradient descent, SGD, and Adam
+- `pytorch/`: tensors, autograd, training examples, and FashionMNIST
+- `mini_projects/`: practical console apps and end-to-end mini projects
+- `docs/`: supporting documentation, including the PyTorch guide
 
-## Bắt đầu nhanh
+## Getting Started
 
-### 1. Tạo và kích hoạt môi trường ảo
+### 1. Create and activate a virtual environment
 
-- Recommend python 3.10.11
+Recommended Python version: 3.10.11
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 ```
 
-### 2. Cài thư viện cần thiết
+If you are on macOS or Linux, use:
+
+```bash
+source .venv/bin/activate
+```
+
+### 2. Install dependencies
 
 ```bash
 pip install torch torchvision torchaudio
 pip install jupyter numpy pandas matplotlib seaborn scikit-learn
 ```
 
-Nếu bạn dùng GPU, hãy cài PyTorch đúng phiên bản CUDA theo hướng dẫn trên trang chủ PyTorch.
+If you use a GPU, install the PyTorch build that matches your CUDA version from the official PyTorch website.
 
-### 3. Kiểm tra PyTorch và CUDA
+### 3. Verify PyTorch and CUDA
+
+Run the check script from the `mini_projects/` folder:
 
 ```bash
-python check.py
+python mini_projects/check.py
 ```
 
-Script này sẽ in ra phiên bản PyTorch, trạng thái CUDA và thông tin GPU nếu máy có hỗ trợ.
+This prints the installed PyTorch version, CUDA availability, and GPU details when available.
 
-### 4. Mở notebook
+### 4. Open notebooks
 
 ```bash
 jupyter notebook
 ```
 
-Sau đó mở các notebook theo chủ đề bạn muốn học, ví dụ:
+Then open any notebook you want to study, for example:
 
 - `pytorch/fashionMNISTImageClassifier.ipynb`
 - `machine_learning/machine_learning_algorithms/logistic_regression.ipynb`
 - `linear_algebra/vector.ipynb`
-- `calculus_for_ai/derivative.ipynb`
+- `Calculus_for_AI/derivative.ipynb`
 
-### 5. Chạy các mini project Python
+### 5. Run the mini projects
 
-Các app console trong repo dùng import nội bộ theo thư mục, vì vậy nên chạy ngay trong folder của từng project:
+The console apps use local imports, so run them from inside their own folders:
 
 ```bash
-cd employee_management
+cd mini_projects\employee_management
 python main.py
 ```
 
 ```bash
-cd mini_project_student
+cd mini_projects\mini_project_student
 python main.py
 ```
 
-## Dữ liệu và model
+## Data and Models
 
-- `data/` chứa các bộ dữ liệu mẫu như Titanic, Diabetes, FashionMNIST, email spam, employees, students
-- `models/` chứa model đã train sẵn, hiện có `model.pth` và các file model khác tùy notebook
+- `data/` contains sample datasets such as Titanic, Diabetes, FashionMNIST, email spam, employees, and students
+- `models/` stores saved models and checkpoints used by selected notebooks and mini projects
 
-## Tài liệu tham khảo
+## Reference Material
 
-- `docs/pytorch.md`: hướng dẫn PyTorch tiếng Việt
+- `docs/pytorch.md`: a Vietnamese PyTorch study guide
 - [PyTorch Docs](https://pytorch.org/docs/)
 - [PyTorch Tutorials](https://pytorch.org/tutorials/)
 
-## Ghi chú
+## Notes
 
-- Đây là project học tập, ưu tiên rõ ràng và dễ thử nghiệm hơn là tối ưu production
-- Bạn có thể thay đổi epochs, learning rate, batch size và kiến trúc model để quan sát kết quả
-- Nên chọn đúng Python interpreter của `.venv` trong VS Code để notebook và script chạy nhất quán
+- This is a learning repository, so clarity and experimentation matter more than production hardening
+- Many notebooks are designed to be edited and rerun while you change epochs, learning rate, batch size, or model architecture
+- In VS Code, make sure the Python interpreter points to the project `.venv` so notebooks and scripts use the same environment

@@ -62,8 +62,9 @@ source .venv/bin/activate
 ### 2. Install dependencies
 
 ```bash
-pip install torch torchvision torchaudio
+python.exe -m pip install --upgrade pip
 pip install jupyter numpy pandas matplotlib seaborn scikit-learn
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
 ```
 
 If you use a GPU, install the PyTorch build that matches your CUDA version from the official PyTorch website.

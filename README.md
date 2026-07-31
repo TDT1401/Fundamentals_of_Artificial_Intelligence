@@ -122,5 +122,3 @@ python main.py
 - This is a learning repository, so clarity and experimentation matter more than production hardening
 - Many notebooks are designed to be edited and rerun while you change epochs, learning rate, batch size, or model architecture
 - In VS Code, make sure the Python interpreter points to the project `.venv` so notebooks and scripts use the same environment
-
-Test
